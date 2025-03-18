@@ -1,17 +1,21 @@
-function adicionar() {
-    inputNome = document.getElementById('nome').value;
-    inputUrl = document.getElementById('url-img').value;
-    itemGroup = document.getElementById('item-group');
+function azul(){
+    document.body.classList.remove('azul','vermelho', 'verde');
+    document.body.classList.add('azul');
+}
 
-    const item = document.createElement('div');
-    item.classList.add('item');
-    itemGroup.appendChild(item);
+function vermelho(){
+    document.body.classList.remove('azul','vermelho', 'verde');
+    document.body.classList.add('vermelho');
+}
 
-    const imagem = document.createElement('img');
-    imagem.setAttribute('src', inputUrl);
-    item.appendChild(imagem);
+function verde(){
+    document.body.classList.remove('azul','vermelho', 'verde');
+    document.body.classList.add('verde');
+}
 
-    const h3 = document.createElement('h3');
-    h3.textContent = inputNome;
-    item.appendChild(h3);
+// função simplificada
+
+function mudaCor(cor){
+    document.body.classList.remove('azul','vermelho', 'verde');
+    document.body.classList.add(cor);
 }
